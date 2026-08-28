@@ -1,0 +1,10 @@
+swirldslabs/clpr-hiero
+hiero-ledger/hiero-consensus-node
+hiero-ledger/hiero-mirror-node
+hiero-ledger/hiero-block-node
+swirldslabs/entente-consensus-node
+swirldslabs/clpr-evm-endpoint
+swirldslabs/entente-token-router
+swirldslabs/entente-atomic-settlement
+swirldslabs/entente-sdk-rust
+

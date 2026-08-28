@@ -15,6 +15,7 @@ Avoid parallel calls to `gh` CLI to avoid errors like `Cancelled: parallel tool 
 Write the output in a obsidian compatible format.
 DO NOT print the markdown to the terminal. Instead, pipe the entire markdown content into `pbcopy` using a heredoc (`cat << 'EOF' | pbcopy ... EOF`) so the user can paste it directly into Obsidian. After running pbcopy, tell the user the content is ready to paste.
 It will be pasted in a note sharing several worklogs like this one, so just put divisors ("---") at the end of the whole content.
+Output the work subjects in chronological order to facilitate reading. Also, add a <month> - <year> date to the subtitle, like "August - 2026"
 
 # Skill: Bragdoc Architect (v1.0)
 
@@ -24,7 +25,7 @@ It will be pasted in a note sharing several worklogs like this one, so just put 
 
 ## 🛠 Operation Instructions
 Your input are Git commits,  PRs, Issues..
-Use the `gh` CLI to fetch pull requests, commits and issues related to $ARGUMENTS (repositories: `hiero-consensus-node`).
+Use the `gh` CLI to fetch pull requests, commits and issues related to $ARGUMENTS (the list of repositories are available in the repos.txt file in this same folder).
 My github user is `viniciusjssouza` or `Vinicius Souza`.
 Another source of data are the hedera HIPS (can be found at https://github.com/hiero-ledger/hiero-improvement-proposals/blob/main/HIP/hip-<hip-number>.md)
 
