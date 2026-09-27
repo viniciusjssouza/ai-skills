@@ -19,6 +19,7 @@ Follow the checklist below:
  - Can a better solution be found in terms of maintainability, readability, performance, or security?
  - Does similar functionality already exist in the codebase? If yes, why isn’t it reused?
  - Are there any best practices, design patterns, or language-specific patterns that could substantially improve this code?
+ - Look for any excessive accidental complexity that can be removed
 
 ## Logic Errors and Bugs
  - Can you think of any use case in which the code does not behave as intended?
