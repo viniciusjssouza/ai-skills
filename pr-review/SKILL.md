@@ -31,6 +31,18 @@ Follow the checklist below:
  - Are error messages user-friendly?
  - Are there enough log events, and are they written in a way that allows for easy debugging?
  - Do logs and error messages avoid exposing secrets or unnecessary personal data?
+
+## Observability
+Look for changes that could not be diagnosed in production from their logs and metrics alone. Follow each failure
+path to where it is caught: flag rejections and errors that are swallowed, turned into a status code, or logged only
+at DEBUG, so they leave no trace at the default level; failure messages that lack the context (ids, versions, sizes,
+inputs) needed to tell what failed; state transitions and security-relevant decisions (trust, keys, configuration,
+endpoints) with no INFO log, or one that omits what was accepted; silent fallbacks to default or empty values; and
+log levels that don't match the impact (ERROR only for unrecoverable conditions, WARN for what operators must
+investigate). Also flag outcomes, sizes, and latencies that a dashboard or alert would need but no metric records,
+using the metrics facility the module already has. Report each gap as a finding with its `file:line`, the log
+(level, message, fields) or metric (name, type, what updates it) to add, and the incident question it would answer.
+Don't ask for INFO-or-higher logs in hot paths or for logging secrets or full payloads.
  
 ## Usability and Accessibility
  - Is the proposed solution well-designed from a usability perspective?
